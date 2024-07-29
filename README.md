@@ -1,12 +1,15 @@
-# sequelize-auto-migrations
+# sequelize-auto-migrations-v6
 Migration generator &amp;&amp; runner for sequelize
 
 This package provide two tools:
 * `makemigration` - tool for create new migrations
 * `runmigration` - tool for apply created by first tool migrations
 
+* node node_modules/sequelize-auto-migrations-v6/bin/runmigration.js
+* node node_modules/sequelize-auto-migrations-v6/bin/makemigration.js --name <migration-name>
+
 ## Install
-`npm install sequelize-auto-migrations`
+`npm install sequelize-auto-migrations-v6
 
 ## Usage
 * Init sequelize, with sequelize-cli, using `sequelize init`
@@ -34,8 +37,3 @@ It will use this table to remember and continue after last executed migration. Y
 Only migrations created after version 1.1.0 will be logged to `_migrations`.
 
 For more information, use `makemigration --help`, `runmigration --help`
-
-## TODO:
-* Migration action sorting procedure need some fixes. When many foreign keys in tables, there is a bug with action order. Now, please check it manually (`--preview` option)
-* Need to check (and maybe fix) field types: `BLOB`, `RANGE`, `ARRAY`, `GEOMETRY`, `GEOGRAPHY`
-* Downgrade is not supported, add it
